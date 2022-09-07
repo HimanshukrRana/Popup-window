@@ -1,0 +1,120 @@
+/*Exit Intent Popup*/
+
+@font-face {
+  font-family: "adobe-garamond-pro";
+  src: url("https://cdn.shopify.com/s/files/1/0093/4369/6975/files/AGaramondPro-Regular.otf?v=1622314497");
+}
+
+.exit-intent-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999999999;
+  background: rgba(0, 0, 0, 0.4);
+
+  transform: translateY(60%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.exit-intent-popup.visible {
+  transform: translateY(0) scale(1);
+}
+
+.popup-wrap {
+  box-shadow: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 40px;
+  background: white;
+  color: black;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.buttoncl {
+  /* font-family: WebtipsBold; */
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  background: #ff0000;
+  color: #fff;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  transition: 0.1s opacity linear !important;
+  backface-visibility: hidden !important;
+}
+.maintitle {
+  font-size: 30px;
+}
+
+.button {
+  align-content: center;
+}
+.close {
+  font-family: system-ui;
+  position: absolute;
+  font-weight: 100;
+  color: rgb(179, 179, 179);
+  font-size: 45px;
+  right: 15px;
+  top: 2px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.popup-title {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: 2.75rem;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.popup-subtitle {
+  margin: 30px 0 40px;
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .popup-wrap {
+    padding: 30px 20px;
+    width: 84%;
+  }
+  .popup-title {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  .popup-subtitle {
+    margin: 16px 0 26px;
+    line-height: 1.4;
+  }
+  .buttoncl {
+    padding: 14px 20px;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+  .close {
+    font-size: 40px;
+    right: 0px;
+    top: -10px;
+  }
+}
